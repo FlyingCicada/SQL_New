@@ -63,7 +63,7 @@ FROM  (SELECT t1.full_name, t1.pay_month, t1.count_permonth, t1.sum_tot
 /*QUERY 4 - For the fourth slide*/
 SELECT DATE_PART('month', r.rental_date) AS rental_month,
 	     DATE_PART('year', r.rental_date) AS rental_year,
-	     i.store_id,
+	     i.store_id AS store_id,
 	     COUNT(i.store_id)
 FROM inventory i
 JOIN rental r
